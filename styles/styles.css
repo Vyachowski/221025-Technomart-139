@@ -368,12 +368,22 @@ img {
 /* Fields & Select */
 
 .form-field {
-  padding: 8px 9px 12px 13px;
-  border: 1px solid transparent;
+  padding: 6px 9px 8px 13px;
+  border: 1px solid var(--basic-grey);
   border-radius: 2px;
-  outline: 1px solid var(--basic-grey);
-  font: inherit;
-  color: inherit;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--basic-grey);
+}
+
+.subscription-field {
+  min-width: 222px;
+  border-radius: 2px;
+  border-color: var(--basic-green);
+  padding: 10px 16px 10px 16px;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 .form-field::placeholder {
@@ -382,30 +392,35 @@ img {
 
 .form-field:hover {
   color: var(--basic-grey-click);
-  outline-color: var(--basic-green);
+  border-color: var(--basic-green);
+  cursor: pointer;
 }
 
 .form-field:focus-visible {
   color: var(--basic-grey-click);
   border-color: var(--basic-green);
-  outline-color: var(--special-yellow);
+  outline: 1px solid var(--special-yellow);
+  outline-offset: -2px;
 }
 
 .form-field-is-invalid {
-  outline-color: var(--basic-red);
+  border-color: var(--basic-red);
 }
 
 .form-field-is-invalid:hover {
   border-color: var(--basic-red);
-  outline-color: var(--basic-red);
+  outline: 1px solid var(--basic-red);
+  outline-offset: -2px;
+  color: var(--black);
   cursor: pointer;
 }
 
 .form-field:disabled {
   color: var(--black);
   background-color: var(--basic-background);
-  outline-color: var(--basic-greylight);
+  border-color: var(--basic-greylight);
   opacity: 0.5;
+  pointer-events: none;
 }
 
 .select-control {
@@ -769,7 +784,6 @@ img {
 .login-field,
 .password-field {
   min-width: 300px;
-  padding: 6px 9px 8px 13px;
 }
 
 .login-field {
@@ -1262,13 +1276,12 @@ img {
   background-color: var(--white);
 }
 
-.range-toggle::before {
-  position: absolute;
-  content: "";
-  width: 20px;
-  height: 2px;
-  left: -2px;
-  top: -2px;
+.range-toggle:hover {
+  background-color: var(--basic-green-click);
+}
+
+.range-toggle:active {
+  background-color: var(--basic-green-hover);
 }
 
 .toggle-min {
@@ -1367,7 +1380,6 @@ input[type=number] {
   border-color: var(--basic-grey-hover);
 }
 
-
 .control-mark::before,
 .control-mark-radio::before {
   position: absolute;
@@ -1376,6 +1388,10 @@ input[type=number] {
   height: 20px;
   left: -2px;
   top: -2px;
+}
+
+.control-mark-radio {
+  border-radius: 50%;
 }
 
 .control-mark-radio::before {
@@ -1427,10 +1443,6 @@ input[type=number] {
   background-repeat: no-repeat;
   background-position: center;
   content: "";
-}
-
-.control-mark-radio {
-  border-radius: 50%;
 }
 
 .control-input[type="radio"]:checked + .control-mark-radio {
@@ -1829,16 +1841,6 @@ input[type=number] {
 
 .subscription-form {
   display: flex;
-}
-
-.subscription-field {
-  min-width: 223px;
-  border-radius: 2px;
-  padding: 10px 16px 10px 16px;
-  line-height: 18px;
-  font-size: 14px;
-  line-height: 18px;
-  outline: none;
 }
 
 .button-subscription {
