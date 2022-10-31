@@ -37,6 +37,8 @@
             <div class="user-menu">
               <div class="logged-out-menu">
                 <h3 class="user-menu-title subtitle">ЛИЧНЫЙ КАБИНЕТ</h3>
+                <!-- Чтобы увидеть состояние полей ввода с ошибкой добавьте к инпуту 
+                класс form-field-is-invalid-->
                 <form class="login-form" action="https://echo.htmlacademy.ru/" method="post">
                   <input class="login-field form-field" type="text" name="user-name" placeholder="Логин" aria-label="Поле ввода имени пользователя.">
                   <input class="password-field form-field" type="password" name="pass" placeholder="Пароль" aria-label="Поле ввода пароля.">
@@ -524,7 +526,7 @@
           </p>
           <p class="subscription-text">Получайте лучшие предложения</p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="subscription-field form-field form-field-is-invalid" type="email" name="email" placeholder="email@example.com" aria-label="Поле ввода электронной почты для получения рассылки.">
+            <input class="subscription-field form-field" type="email" name="email" placeholder="email@example.com" aria-label="Поле ввода электронной почты для получения рассылки.">
             <button class="button-subscription" type="submit">
               <span class="visually-hidden">Подписаться на рассылку.</span>
             </button>
