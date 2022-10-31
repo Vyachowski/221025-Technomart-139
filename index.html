@@ -8,400 +8,541 @@
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
   </head>
   <body>
-    <header class="page-header container">
-      
+    <header class="page-header">
+      <div class="header-contacts-wrapper">
+        <div class="header-contacts container">
+          <i class="logo-descriptor label">Интернет-магазин строительных материалов и инструментов для ремонта</i>
+          <div class="header-contacts-wrapper">
+            <address class="header-address label">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+            <a class="header-phone" href="tel:88125550555">+7 (812) 555-05-55</a>
+          </div>
+        </div>
+      </div>
+      <div class="header-user-menu-wrapper">
+        <div class="header-user-menu container">
+          <a class="header-logo-link" href="#" aria-label="Ссылка на текущую страницу.">
+            <img class="header-logo" src="images/logo-header.jpg" width="220" height="50" alt="Логотип магазина «Техномарт».">
+          </a>
+          <form class="search-line" action="https://echo.htmlacademy.ru/" method="post">
+            <input class="search-line-field" type="text" placeholder="Поиск:" name="q" aria-label="Строка поиска по сайту.">
+            <button class="search-line-clear-button" type="button">
+              <span class="visually-hidden">Очистить поле поиска.</span>
+            </button>
+          </form>
+          <div class="login-wrapper-logged-out">
+            <!-- Чтобы увидеть второй вариант модального окна замените в элементе div выше
+              класс login-wrapper-logged-out на класс login-wrapper-logged-in -->
+            <button class="login-button" type="button">ВОЙТИ</button>
+            <button class="logout-button" type="button">Равшан Джамшутович</button>
+            <div class="user-menu">
+              <div class="logged-out-menu">
+                <h3 class="user-menu-title subtitle">ЛИЧНЫЙ КАБИНЕТ</h3>
+                <form class="login-form" action="https://echo.htmlacademy.ru/" method="post">
+                  <input class="login-field form-field" type="text" name="user-name" placeholder="Логин" aria-label="Поле ввода имени пользователя.">
+                  <input class="password-field form-field" type="password" name="pass" placeholder="Пароль" aria-label="Поле ввода пароля.">
+                  <div class="additional-actions-wrapper">
+                    <label class="control">
+                      <input class="control-input visually-hidden" name="remember-me" value="yes" type="checkbox" aria-label="Запомнить данные для входа." checked>
+                      <span class="control-mark"></span>
+                      <span class="control-label label">Запомнить меня</span>
+                    </label>
+                    <a class="forgot-password-link label" href="#" aria-label="Перейти на страницу восстановления пароля.">Забыл пароль</a>
+                  </div>
+                <div class="logged-out-menu-buttons-wrapper">
+                  <button class="log-in-button button-alternate" type="submit" aria-label="Войти в личный кабинет.">ВОЙТИ</button>
+                  <a class="registration-button button-additional" href="#" aria-label="Регистрация нового пользователя.">РЕГИСТРАЦИЯ</a>
+                </div>
+              </form>
+              </div>
+              <div class="logged-in-menu">
+                <h3 class="user-menu-title subtitle">Здравствуйте, <br> Равшан Джамшутович</h3>
+                <a class="orders-link label" href="#">МОИ ЗАКАЗЫ</a>
+                <a class="personal-account-link label" href="#">ЛИЧНЫЙ КАБИНЕТ</a>
+                <a class="log-out-button button-additional" href="#">ВЫЙТИ</a>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+      <div class="header-navigation-wrapper">
+        <div class="menu-wrapper container">
+          <nav class="header-navigation">
+            <ul class="navigation-list">
+              <li class="navigation-item">
+                <a class="navigation-link" href="#" title="Главная">Главная</a>
+              </li>
+              <li class="navigation-item">
+                <a class="navigation-link" href="#" title="Компания">Компания</a>
+              </li>
+              <li class="navigation item">
+                <a class="navigation-link" href="#" title="Каталог">Каталог</a>
+              </li>
+              <li class="navigation-item">
+                <a class="navigation-link" href="#" title="Новости">Новости</a>
+              </li>
+              <li class="navigation-item">
+                <a class="navigation-link" href="#" title="Спецпредложения">Спецпредложения</a>
+              </li>
+              <li class="navigation-item">
+                <a class="navigation-link" href="#" title="Доставка">Доставка</a>
+              </li>
+              <li class="navigation-item">
+                <a class="navigation-link" href="#" title="Контакты">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="order-menu-wrapper">
+            <ul class="order-menu-list order-menu-empty">
+              <!-- Чтобы увидеть иконки с цифрами по макету удалите у списка выше (ul 
+              с классом order-menu-list) класс order-menu-empty -->
+              <li class="order-menu-item order-menu-item-favourites">
+                <a class="button-favorites label" href="#">
+                  <svg class="button-favorites-icon" width="16" height="18" viewBox="0 0 18 20" fill="white" xmlns="http://www.w3.org/2000/svg" aria-label="Посмотреть Избранное.">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2 20L9 16.6049L16 20V1.94005C16 0.86859 15.1046 0 14 0H4C2.89543 0 2 0.86859 2 1.94005V20ZM9 14.4359L4 16.8609V1.94005H14V16.8609L9 14.4359Z"/>
+                  </svg>
+                  <span class="order-menu-numbers">12</span>
+                </a>
+              </li>
+              <li class="order-menu-item order-menu-item-cart">
+                <a class="button-cart label" href="#">
+                  <svg class="button-cart-icon" width="20" height="20" viewBox="0 0 20 20" fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.05671 2.00254C3.87974 2.00216 3.70915 2.02226 3.54704 2.06048C3.32482 1.56893 3.03129 1.12794 2.69744 0.792893C2.1308 0.224221 1.23712 0 0 0V2C0.755739 2 1.19063 2.10911 1.28828 2.20711C1.6649 2.58508 1.99286 3.35306 1.99286 4L2.00287 4.14142L2.97924 11.0005C1.34553 11.0856 0.0799112 12.3588 0.00122419 13.9504L0 15C0.0964754 16.6439 1.35789 17.9085 2.93273 17.9984L3.15894 17.9987C3.56894 19.1646 4.67655 20 5.97857 20C7.28012 20 8.38739 19.1652 8.79776 18H11.1308C11.5412 19.1652 12.6484 20 13.95 20C15.6009 20 16.9393 18.6569 16.9393 17C16.9393 15.3431 15.6009 14 13.95 14C12.6484 14 11.5412 14.8348 11.1308 16H8.79776C8.38739 14.8348 7.28012 14 5.97857 14C4.67702 14 3.56975 14.8348 3.15938 16H2.98929C2.48112 15.9694 2.02528 15.5124 1.99107 14.9401L1.99286 14C2.01973 13.4813 2.47245 13.027 3.03866 12.9988L5.00575 12.9993L5.02001 13H15.0629L15.2099 12.9532C15.9654 12.7126 16.5703 12.1416 16.8566 11.4025L16.9616 11.194L17.3026 10.5159C17.6555 9.81392 18.0083 9.11076 18.3522 8.4238C19.1944 6.74107 19.7241 5.67166 19.8414 5.40906C20.4438 4.06045 19.2235 3.02246 17.9763 3.00036L4.05671 2.00254ZM14.7167 11H5.09461C5.03063 10.9822 4.98187 10.9278 4.97233 10.86L3.99593 4.00073L17.8295 4.99493C17.5874 5.49032 17.1474 6.37516 16.5714 7.52609L16.5569 7.55493C16.2281 8.21186 15.8757 8.91405 15.5234 9.61507L15.1827 10.2923L15.0536 10.5488L15.005 10.6622C14.9529 10.8078 14.8496 10.9274 14.7167 11ZM13.95 18C14.5003 18 14.9464 17.5523 14.9464 17C14.9464 16.4477 14.5003 16 13.95 16C13.3997 16 12.9536 16.4477 12.9536 17C12.9536 17.5523 13.3997 18 13.95 18ZM6.975 17C6.975 17.5523 6.52888 18 5.97857 18C5.42826 18 4.98214 17.5523 4.98214 17C4.98214 16.4477 5.42826 16 5.97857 16C6.52888 16 6.975 16.4477 6.975 17Z"/>
+                  </svg>
+                  <span class="order-menu-numbers">2</span>
+                </a>
+              </li>
+              
+              <li class="order-menu-item order-menu-item-order">
+                <a class="button-order button-alternate" href="#">ОФОРМИТЬ ЗАКАЗ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </header>
 
-    <main class="main-index container">
-      <h1 class="visually-hidden">Интернет-магазин мороженого «Глэйси».</h1>
-      <section class="slider">
-        <h2 class="visually-hidden">Промо-слайдер</h2>
-        <div class="slider-slides">
-          <div class="slider-slide is-active" data-color="#feafc3">
-            <div class="slider-content">
-              <h3 class="slider-title title">Нежный пломбир с&nbsp;клубничным джемом</h3>
-              <p class="slider-description">Натуральное мороженое из свежих сливок
-                и&nbsp;молока с вкуснейшим клубничным джемом <br> – это&nbsp;идеальный десерт для всей семьи. </p>
-              <a class="button" href="#">Заказать</a>
-            </div>
-            <div class="slider-image-wrapper">
-              <img class="slider-image" src="images/index/promo-product-1.png"
-                alt="Вафельный рожок мороженого пломбир с клубничным джемом." width="306" height="507">
-            </div>
-          </div>
-          <div class="slider-slide" data-color="#69a9ff">
-            <div class="slider-content">
-              <h3 class="slider-title title">Сливочное мороженое со вкусом банана</h3>
-              <p class="slider-description">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и
-                наслаждение даже в самый жаркий летний день. </p>
-              <a class="button" href="#">Заказать</a>
-            </div>
-            <div class="slider-image-wrapper">
-              <img class="slider-image" src="images/index/promo-product-2.png"
-                alt="Вафельный рожок сливочного бананового мороженого." width="306" height="507">
-            </div>
-          </div>
-          <div class="slider-slide" data-color="#fcc850">
-            <div class="slider-content">
-              <h3 class="slider-title title">Карамельный пломбир с маршмеллоу</h3>
-              <p class="slider-description">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет
-                сердца сладкоежек всех возрастов.</p>
-              <a class="button" href="#">Заказать</a>
-            </div>
-            <div class="slider-image-wrapper">
-              <img class="slider-image" src="images/index/promo-product-3.png"
-                alt="Вафельный рожок карамельного мороженого с маршмеллоу." width="306" height="507">
-            </div>
-          </div>
+    <main class="main-index">
+      <h1 class="visually-hidden">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+      
+      <section class="promo container">
+        <h2 class="visually-hidden">Акции и распродажи</h2>
+        <div class="promo-item promo-item-materials new-badge">
+          <h3 class="promo-item-header subtitle">МАТЕРИАЛЫ</h3>
+          <a class="button-promo-nav" href="#">НА ЛЮБОЙ ВКУС</a>
         </div>
-        <div class="slider-toggles">
-          <button class="slider-toggle prev-slide-button" type="button">
-            <span class="visually-hidden">Предыдущий слайд.</span>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M9.803 3.805a.665.665 0 1 0-.94-.94L4.195 7.533a.665.665 0 0 0-.003.938l.004.003 4.668 4.668a.665.665 0 1 0 .94-.94L5.605 8.003l4.198-4.198Z"
-                fill="currentColor" /></svg>
-          </button>
-          <button class="slider-toggle next-slide-button" type="button">
-            <span class="visually-hidden">Следующий слайд.</span>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M7.135 2.865a.665.665 0 1 0-.94.94l4.201 4.201-4.201 4.202a.665.665 0 0 0 .94.94l4.669-4.669.003-.002c.26-.26.26-.681 0-.94L7.135 2.864Z"
-                fill="currentColor" /></svg>
-          </button>
+        <div class="promo-item promo-item-powertools">
+          <h3 class="promo-item-header subtitle">ИНСТРУМЕНТ</h3>
+          <a class="button-promo-nav" href="#">НА ВСЕ СЛУЧАИ</a>
         </div>
-        <div class="slider-footer">
+        <div class="promo-item promo-item-machines">
+          <h3 class="promo-item-header subtitle">ТЕХНИКА</h3>
+          <a class="button-promo-nav" href="#">ДЛЯ СТРОЙКИ</a>
+        </div>
+        <!-- При нажатии на стрелки у слайдера будут переключаться активный класс у слайда,
+        а также активный класс у точек пагинации слайдов -->
+        <div class="slider">
+          <div class="slide is-active slide-drills">
+            <h3 class="slider-title title">ДРЕЛИ</h3>
+            <p class="slider-description">Соседям на радость!</p>
+            <a class="button" href="#">ОТКРЫТЬ КАТАЛОГ</a>
+          </div>
+          <div class="slide slide-perforators">
+            <div class="slider-content">
+              <h3 class="slider-title title">ПЕРФОРАТОРЫ</h3>
+              <p class="slider-description">Настоящие мужские игрушки</p>
+              <a class="button" href="#">ОТКРЫТЬ КАТАЛОГ</a>
+            </div>
+          </div>
+          <div class="slider-toggles">
+            <button class="slider-toggle prev-slide-button" type="button">
+              <span class="visually-hidden">Предыдущий слайд.</span>
+            </button>
+            <button class="slider-toggle next-slide-button" type="button">
+              <span class="visually-hidden">Следующий слайд.</span>
+            </button>
+          </div>
           <div class="slider-pagination">
             <button class="slider-pagination-button is-active" type="button">
-              <span class="visually-hidden">Первый товар.</span>
+              <span class="visually-hidden">Первый слайд.</span>
             </button>
             <button class="slider-pagination-button" type="button">
-              <span class="visually-hidden">Второй товар.</span>
+              <span class="visually-hidden">Второй слайд.</span>
             </button>
             <button class="slider-pagination-button" type="button">
-              <span class="visually-hidden">Третий товар.</span>
+              <span class="visually-hidden">Третий слайд.</span>
             </button>
           </div>
-          <ul class="slider-social-list">
-            <li class="slide-social-item">
-              <a class="slide-social-link slide-social-link-tg" href="https://t.me/htmlacademy">
-                <span class="visually-hidden">Телеграмм.</span>
+        </div>
+        <div class="promo-item promo-item-discounts">
+          <h3 class="promo-item-header subtitle">СКИДКИ 50%</h3>
+          <a class="button-promo-nav" href="#">НА 350 ТОВАРОВ</a>
+        </div>
+        <div class="promo-item promo-item-delivery">
+          <h3 class="promo-item-header subtitle">ДОСТАВКА</h3>
+          <a class="button-promo-nav" href="#">БЕСПЛАТНО</a>
+        </div>
+      </section>
+
+      <section class="catalog-products container">
+        <h2 class="catalog-products-title title">ПЕРФОРАТОРЫ</h2>
+        <div class="catalog-wrapper">
+
+          <section class="catalog-filter">
+            <form class="catalog-filter-form" action="https://echo.htmlacademy.ru/" method="post">
+              <h2 class="visually-hidden">Фильтр для товаров каталога.</h2>
+              <fieldset class="catalog-filter-group catalog-filter-group-price">
+                <legend class="catalog-filter-group-name catalog-filter-group-name-price paragraph-bold">ЦЕНА</legend>
+                  <div class="range">
+                    <div class="range-wrapper">
+                      <div class="range-scale">
+                        <div class="range-bar" style="left: 0; width: 139px;">
+                          <button class="range-toggle toggle-min" type="button">
+                            <span class="visually-hidden">Изменить минимальную стоимость.</span>
+                          </button>
+                          <button class="range-toggle toggle-max" type="button">
+                            <span class="visually-hidden">Изменить максимальную стоимость.</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="range-wrapper-inputs">
+                      <input class="range-input label" type="number" value="0" name="min-price" aria-label="Значение минимальной цены.">
+                      <span class="range-element">&nbsp;—&nbsp;</span>
+                      <input class="range-input label" type="number" value="30000" name="max-price" aria-label="Значение максимальной цены.">
+                    </div>
+                  </div>
+              </fieldset>
+              <fieldset class="catalog-filter-group catalog-filter-group-manufacturer">
+                <legend class="catalog-filter-group-name catalog-filter-group-name-manufacturer paragraph-bold">ПРОИЗВОДИТЕЛИ</legend>
+                  <ul class="catalog-filter-form-list">
+                    <li class="catalog-list-item">
+                      <label class="control">
+                        <input class="control-input visually-hidden" name="brand" value="bosch" type="checkbox" aria-label="Выбрать товары BOSCH." checked>
+                        <span class="control-mark"></span>
+                        <span class="control-label label">BOSCH</span>
+                      </label>
+                    </li>
+                    <li class="catalog-list-item">
+                      <label class="control">
+                        <input class="control-input visually-hidden" name="brand" value="interskol" type="checkbox" aria-label="Выбрать товары Interskol.">
+                        <span class="control-mark"></span>
+                        <span class="control-label label">ИНТЕРСКОЛ</span>
+                      </label>
+                    </li>
+                    <li class="catalog-list-item">
+                      <label class="control">
+                        <input class="control-input visually-hidden" name="brand" value="makita" type="checkbox" aria-label="Выбрать товары Makita." checked>
+                        <span class="control-mark"></span>
+                        <span class="control-label label">MAKita</span>
+                      </label>
+                    </li>
+                    <li class="catalog-list-item">
+                      <label class="control">
+                        <input class="control-input visually-hidden" name="brand" value="dewalt" type="checkbox" aria-label="Выбрать товары Dewalt.">
+                        <span class="control-mark"></span>
+                        <span class="control-label label">Dewalt</span>
+                      </label>
+                    </li>
+                    <li class="catalog-list-item">
+                      <label class="control">
+                        <input class="control-input visually-hidden" name="brand" value="hitachi" type="checkbox" aria-label="Выбрать товары Hitachi.">
+                        <span class="control-mark"></span>
+                        <span class="control-label label">Hitachi</span>
+                      </label>
+                    </li>
+                  </ul>
+              </fieldset>
+              <fieldset class="catalog-filter-group catalog-filter-group-power">
+                <legend class="catalog-filter-group-name catalog-filter-group-name-power paragraph-bold">ПИТАНИЕ</legend>
+                  <ul class="catalog-filter-form-list catalog-filter-form-list-radio">
+                    <li class="catalog-list-item">
+                      <label class="control">
+                        <input class="control-input visually-hidden" type="radio" name="power-type" value="battery" aria-label="Выбрать товары с питанием от батареи." checked>
+                        <span class="control-mark-radio"></span>
+                        <span class="control-label label">Аккумуляторные</span>
+                      </label>
+                    </li>
+                    <li class="catalog-list-item">
+                      <label class="control">
+                        <input class="control-input visually-hidden" type="radio" name="power-type" value="wired" aria-label="Выбрать товары с питанием от сети.">
+                        <span class="control-mark-radio"></span>
+                        <span class="control-label label">Сетевые</span>
+                      </label>
+                    </li>
+                  </ul>
+              </fieldset>
+              <button class="catalog-filter-form-button button-additional" type="submit" aria-label="Показать товары с учетом фильтров">Показать</button>
+            </form>
+          </section>
+
+          <section class="catalog-search-result">
+            <h2 class="visually-hidden">Сортировка:</h2>
+            <div class="select-control-wrapper">
+              <select class="select-control" aria-label="Сортировка результатов поиска.">
+                <option value="Popular">Сортировать</option>
+                <option value="Cheap">Сначала дешевые</option>
+                <option value="Expensive">Сначала дорогие</option>
+              </select>
+            </div>
+            <div class="product-list-container">
+              <ul class="product-list">
+                <li class="product-card product-card-new">
+                  <div class="image-buttons-wrapper">
+                    <img class="product-card-image" src="images/perforator.png" width="216" height="180" alt="Перфоратор BOSCH «BFG 3000».">
+                    <div class="card-buttons-wrapper">
+                      <button class="button-alternate button-buy" type="button">КУПИТЬ</button>
+                      <button class="button-additional button-favorite" type="button">В ЗАКЛАДКИ</button>
+                    </div>
+                  </div>
+                  <h3 class="product-card-title third-title">Перфоратор BOSCH <br> BFG 2000</h3>
+                  <del class="product-card-old-price label">22500 ₽</del>
+                  <a class="button-arrow" href="#">
+                    <span class="button-arrow-text">15500 ₽</span>
+                  </a>
+                </li>
+                <li class="product-card">
+                  <div class="image-buttons-wrapper">
+                    <img class="product-card-image" src="images/drill.png" width="216" height="180" alt="Перфоратор BOSCH «BFG 6000».">
+                    <div class="card-buttons-wrapper">
+                      <button class="button-alternate button-buy" type="button">КУПИТЬ</button>
+                      <button class="button-additional button-favorite" type="button">В ЗАКЛАДКИ</button>
+                    </div>
+                  </div>
+                  <h3 class="product-card-title third-title">Перфоратор BOSCH <br> BFG 6000</h3>
+                  <span class="product-card-old-price label">30500 ₽</span>
+                  <a class="button-arrow" href="#">
+                    <span class="button-arrow-text">25500 ₽</span>
+                  </a>
+                </li>
+                <li class="product-card product-card-new">
+                  <div class="image-buttons-wrapper">
+                    <img class="product-card-image" src="images/drill.png" width="216" height="180" alt="Перфоратор BOSCH «BFG 2000».">
+                    <div class="card-buttons-wrapper">
+                      <button class="button-alternate button-buy">КУПИТЬ</button>
+                      <button class="button-additional button-favorite">В ЗАКЛАДКИ</button>
+                    </div>
+                  </div>
+                  <h3 class="product-card-title third-title">Перфоратор BOSCH <br> BFG 2000</h3>
+                  <a class="button-arrow" href="#">
+                    <span class="button-arrow-text">25500 ₽</span>
+                  </a>
+                </li>
+                <li class="product-card">
+                  <div class="image-buttons-wrapper">
+                    <img class="product-card-image" src="images/drill.png" width="216" height="180" alt="Перфоратор BOSCH «BFG 3000».">
+                    <div class="card-buttons-wrapper">
+                      <button class="button-alternate button-buy" type="button">КУПИТЬ</button>
+                      <button class="button-additional button-favorite" type="button">В ЗАКЛАДКИ</button>
+                    </div>
+                  </div>
+                  <h3 class="product-card-title third-title">Перфоратор BOSCH <br> BFG 3000</h3>
+                  <del class="product-card-old-price label">22500 ₽</del>
+                  <a class="button-arrow" href="#">
+                    <span class="button-arrow-text">15500 ₽</span>
+                  </a>
+                </li>
+                <li class="product-card product-card-new">
+                  <div class="image-buttons-wrapper">
+                    <img class="product-card-image" src="images/drill.png" width="216" height="180" alt="Перфоратор BOSCH «BFG 6000».">
+                    <div class="card-buttons-wrapper">
+                      <button class="button-alternate button-buy" type="button">КУПИТЬ</button>
+                      <button class="button-additional button-favorite" type="button">В ЗАКЛАДКИ</button>
+                    </div>
+                  </div>
+                  <h3 class="product-card-title third-title">Перфоратор BOSCH <br> BFG 6000</h3>
+                  <a class="button-arrow" href="#">
+                    <span class="button-arrow-text">25500 ₽</span>
+                  </a>
+                </li>
+                <li class="product-card">
+                  <div class="image-buttons-wrapper">
+                    <img class="product-card-image" src="images/perforator.png" width="216" height="180" alt="Перфоратор BOSCH «BFG 2000».">
+                    <div class="card-buttons-wrapper">
+                      <button class="button-alternate button-buy">КУПИТЬ</button>
+                      <button class="button-additional button-favorite">В ЗАКЛАДКИ</button>
+                    </div>
+                  </div>
+                  <h3 class="product-card-title third-title">Перфоратор BOSCH <br> BFG 2000</h3>
+                  <a class="button-arrow" href="#">
+                    <span class="button-arrow-text">25500 ₽</span>
+                  </a>
+                </li>
+                <li class="product-card product-card-new">
+                  <div class="image-buttons-wrapper">
+                    <img class="product-card-image" src="images/drill.png" width="216" height="180" alt="Перфоратор BOSCH «BFG 3000».">
+                    <div class="card-buttons-wrapper">
+                      <button class="button-alternate button-buy" type="button">КУПИТЬ</button>
+                      <button class="button-additional button-favorite" type="button">В ЗАКЛАДКИ</button>
+                    </div>
+                  </div>
+                  <h3 class="product-card-title third-title">Перфоратор BOSCH <br> BFG 3000</h3>
+                  <del class="product-card-old-price label">22500 ₽</del>
+                  <a class="button-arrow" href="#">
+                    <span class="button-arrow-text">15500 ₽</span>
+                  </a>
+                </li>
+                <li class="product-card">
+                  <div class="image-buttons-wrapper">
+                    <img class="product-card-image" src="images/perforator.png" width="216" height="180" alt="Перфоратор BOSCH «BFG 6000».">
+                    <div class="card-buttons-wrapper">
+                      <button class="button-alternate button-buy" type="button">КУПИТЬ</button>
+                      <button class="button-additional button-favorite" type="button">В ЗАКЛАДКИ</button>
+                    </div>
+                  </div>
+                  <h3 class="product-card-title third-title">Перфоратор BOSCH <br> BFG 6000</h3>
+                  <span class="product-card-old-price label">30500 ₽</span>
+                  <a class="button-arrow" href="#">
+                    <span class="button-arrow-text">25500 ₽</span>
+                  </a>
+                </li>
+                <li class="product-card product-card-new">
+                  <div class="image-buttons-wrapper">
+                    <img class="product-card-image" src="images/drill.png" width="216" height="180" alt="Перфоратор BOSCH «BFG 2000».">
+                    <div class="card-buttons-wrapper">
+                      <button class="button-alternate button-buy">КУПИТЬ</button>
+                      <button class="button-additional button-favorite">В ЗАКЛАДКИ</button>
+                    </div>
+                  </div>
+                  <h3 class="product-card-title third-title">Перфоратор BOSCH <br> BFG 2000</h3>
+                  <a class="button-arrow" href="#">
+                    <span class="button-arrow-text">25500 ₽</span>
+                  </a>
+                </li>
+              </ul>
+              <div class="pagination-container">
+                <ul class="pagination">
+                  <li class="pagination-item">
+                    <a class="pagination-link" href="#">1</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link current-page" href="#">2</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link" href="#">3</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link" href="#">4</a>
+                  </li>
+                </ul>
+                <a class="button button-more" href="#">ПОКАЗАТЬ ЕЩЁ</a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="services">
+        <div class="services-wrapper container">
+          <h2 class="services-title title">Сервисы</h2>
+          <p class="services-slogan paragraph-large">
+            Хороший интернет-магазин отличается от плохого не только ценами! <br>
+            <span class="slogan-alt-text">Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</span>
+          </p>
+          <ul class="services-list">
+            <li class="service-item service-item-delivery">
+              <h3 class="services-subtitles subtitle">ДОСТАВКА</h3>
+              <p class="services-description">
+                Мы с удовольствием доставим ваш товар <br> прямо к вашему подъезду совершенно <br> бесплатно! Ведь мы неплохо заработаем, <br>
+            поднимая его на ваш этаж!
+              </p>
+            </li>
+            <li class="service-item service-item-warranty">
+              <h3 class="services-subtitles subtitle">ГАРАНТИЯ</h3>
+              <p class="services-description">
+                Вы в течение года можете написать нам <br> письмо с просьбой вернуть сумму оплаты, <br> и мы полностью возместим вам стоимость <br> товара
+              </p>
+            </li>
+            <li class="service-item service-item-credit">
+              <h3 class="services-subtitles subtitle">КРЕДИТ</h3>
+              <p class="services-description">
+                Вы можете оформить кредит прямо на <br> сайте! Для этого нужно выбрать <br> понравившийся товар и заполнить поля и <br> ждать результата одобрения кредита. <br>
+                Все как в банке, только проще!
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="about-company container">
+        <div class="company-info">
+          <h2 class="company-title title">КОМПАНИЯ «ТЕХНОМАРТ»</h2>
+          <p class="company-text">
+            Настоящий мужской шоппинг начинается здесь! Огромный выбор <br> товаров для ремонта и строительства не оставит равнодушными <br> любителей сэкономить на гастарбайтерах.
+          </p>
+          <p class="company-text">
+            Мы можем доставить ваш товар в самые отдаленные точки России! <br>
+            Техномарт работает со многими транспортными компаниями:
+          </p>
+          <a class="company-link button" href="#">О КОМПАНИИ</a>
+        </div>
+        <div class="company-contacts">
+          <h2 class="company-contacts-title title">КОНТАКТЫ</h2>
+          <p class="company-contacts-text">
+            Вы можете забрать товар сами, &nbsp;заехав в наш офис:
+          </p>
+          <a class="company-map-link" href="https://www.google.com/maps/place/43%C2%B058'41.2%22N+15%C2%B023'01.1%22E/@43.9786389,15.3820543,17.2z/data=!4m5!3m4!1s0x0:0x8d229b3a8c855d41!8m2!3d43.9781222!4d15.38365">
+            <span class="visually-hidden">Переход на сервис «Гугла карты» с местоположением компании.</span>
+            <img class="company-map" src="images/map.jpg" width="500" height="347" alt="Карта с местоположение компании «ТЕХНОМАРТ».">
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="page-footer">
+
+      <section class="contacts-subscription container">
+        <h2 class="visually-hidden">Контакты</h2>
+        <div class="contacts">
+          <a class="footer-logo-link" href="#" aria-label="Ссылка на текущую страницу.">
+            <img class="footer-logo" src="images/logo-footer.jpg" width="225" height="56" alt="Логотип магазина «Техномарт»">
+          </a>
+          <address class="footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+          <a class="footer-phone" href="tel:88125550555">+7 (812) 555-05-55</a>
+          <ul class="footer-social-list">
+            <li class="footer-social-item">
+              <a class="footer-social-link footer-social-link-pt" href="https://pinterest.com">
+                <span class="visually-hidden">Пинтерест.</span>
               </a>
             </li>
-            <li class="slide-social-item">
-              <a class="slide-social-link slide-social-link-vk" href="https://vk.com/htmlacademy">
+            <li class="footer-social-item">
+              <a class="footer-social-link footer-social-link-vk" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">Вконтакте.</span>
               </a>
             </li>
-            <li class="slide-social-item">
-              <a class="slide-social-link slide-social-link-yt" href="https://www.youtube.com/user/htmlacademyru">
-                <span class="visually-hidden">Ютуб.</span>
+            <li class="footer-social-item">
+              <a class="footer-social-link footer-social-link-vsco" href="https://vsco.com">
+                <span class="visually-hidden">VSCO.</span>
               </a>
             </li>
           </ul>
         </div>
-      </section>
-
-      <section class="gifts">
-        <h2 class="gifts-title subtitle">
-          Заказывайте мороженое и получайте подарки!
-        </h2>
-        <ul class="gifts-list">
-          <li class="gifts-item gifts-item-raspberry">
-            <div class="gifts-description">
-              <h3 class="gifts-item-title title-3">
-                Малинка даром!
-              </h3>
-              <p class="gifts-text paragraph-2">
-                При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.
-              </p>
-              <a class="button" href="#">Хочу подарок</a>
-            </div>
-          </li>
-          <li class="gifts-item gifts-item-marshmallow">
-            <div class="gifts-description">
-              <h3 class="gifts-item-title title-3">
-                Маршмеллоу даром!
-              </h3>
-              <p class="gifts-text paragraph-2">
-                При покупке 2 кг пломбира добавим <br> в ваш заказ упаковку нежных <br> зефирок совершенно бесплатно.
-              </p>
-              <a class="button" href="#">Хочу подарок</a>
-            </div>
-          </li>
-        </ul>
-      </section>
-
-      <section class="popular-products">
-        <h2 class="popular-products-title subtitle">
-          Попробуйте самые популярные вкусы нашего мороженого
-        </h2>
-        <ul class="popular-products-list">
-          <li class="popular-products-item">
-            <img class="popular-products-img" src="images/catalog/product-1.png" width="168" height="168" alt="Малиновый шарик мороженого.">
-            <h3 class="popular-products-item-title title-4">
-              Малинка
-            </h3>
-            <p class="popular-products-text paragraph-2">
-              Сливочное мороженое с малиновым джемом
-            </p>
-            <p class="popular-products-price-wrapper">
-              <strong class="popular-products-price title-4">310 ₽/кг</strong>
-              <button class="button-secondary button-popular-products" type="button">
-                <span class="visually-hidden">Добавить в корзину.</span>
-                <svg class="popular-products-button-icon" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M1.16667 0.25C0.798477 0.25 0.5 0.548477 0.5 0.916667C0.5 1.28486 0.798477 1.58333 1.16667 1.58333H2.93794L3.40537 3.91872C3.40821 3.93667 3.41176 3.95438 3.416 3.97182L4.38338 8.80515L4.3835 8.80571C4.46706 9.22572 4.69562 9.60299 5.02921 9.87153C5.36111 10.1387 5.77595 10.2813 6.20183 10.2748H11.8225C12.2484 10.2813 12.6633 10.1387 12.9952 9.87153C13.3289 9.60287 13.5575 9.22538 13.641 8.80515L13.641 8.80515L13.642 8.80016L14.5691 3.93872C14.6063 3.74355 14.5545 3.54195 14.4279 3.38887C14.3012 3.23578 14.1129 3.14716 13.9142 3.14716H4.61072L4.1381 0.785829C4.07574 0.474257 3.80215 0.25 3.4844 0.25H1.16667ZM5.69098 8.54444L4.87759 4.4805H13.1084L12.3328 8.54736C12.31 8.65988 12.2485 8.7609 12.1591 8.83291C12.0691 8.90535 11.9565 8.94383 11.841 8.94162L11.841 8.94149H11.8282H6.19614V8.94137L6.18337 8.94162C6.06787 8.94383 5.95528 8.90535 5.8653 8.83291C5.77531 8.76048 5.71368 8.6587 5.69117 8.5454L5.69098 8.54444ZM4.55739 12.5054C4.55739 11.8175 5.1151 11.2597 5.80307 11.2597C6.49105 11.2597 7.04876 11.8175 7.04876 12.5054C7.04876 13.1934 6.49105 13.7511 5.80307 13.7511C5.1151 13.7511 4.55739 13.1934 4.55739 12.5054ZM10.9307 12.5054C10.9307 11.8175 11.4884 11.2597 12.1764 11.2597C12.8644 11.2597 13.4221 11.8175 13.4221 12.5054C13.4221 13.1934 12.8644 13.7511 12.1764 13.7511C11.4884 13.7511 10.9307 13.1934 10.9307 12.5054Z" fill="currentColor"/>
-                  </svg>
-              </button>
-            </p>
-          </li>
-          <li class="popular-products-item">
-            <img class="popular-products-img" src="images/catalog/product-2.png" width="168" height="168" alt="Фисташковый шарик мороженого.">
-            <h3 class="popular-products-item-title title-4">
-              Фисташка
-            </h3>
-            <p class="popular-products-text paragraph-2">
-              Фисташковый пломбир с кусочками шоколада
-            </p>
-            <p class="popular-products-price-wrapper">
-              <strong class="popular-products-price title-4">340 ₽/кг</strong>
-              <button class="button-secondary button-popular-products" type="button">
-                <span class="visually-hidden">Добавить в корзину.</span>
-                <svg class="popular-products-button-icon" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M1.16667 0.25C0.798477 0.25 0.5 0.548477 0.5 0.916667C0.5 1.28486 0.798477 1.58333 1.16667 1.58333H2.93794L3.40537 3.91872C3.40821 3.93667 3.41176 3.95438 3.416 3.97182L4.38338 8.80515L4.3835 8.80571C4.46706 9.22572 4.69562 9.60299 5.02921 9.87153C5.36111 10.1387 5.77595 10.2813 6.20183 10.2748H11.8225C12.2484 10.2813 12.6633 10.1387 12.9952 9.87153C13.3289 9.60287 13.5575 9.22538 13.641 8.80515L13.641 8.80515L13.642 8.80016L14.5691 3.93872C14.6063 3.74355 14.5545 3.54195 14.4279 3.38887C14.3012 3.23578 14.1129 3.14716 13.9142 3.14716H4.61072L4.1381 0.785829C4.07574 0.474257 3.80215 0.25 3.4844 0.25H1.16667ZM5.69098 8.54444L4.87759 4.4805H13.1084L12.3328 8.54736C12.31 8.65988 12.2485 8.7609 12.1591 8.83291C12.0691 8.90535 11.9565 8.94383 11.841 8.94162L11.841 8.94149H11.8282H6.19614V8.94137L6.18337 8.94162C6.06787 8.94383 5.95528 8.90535 5.8653 8.83291C5.77531 8.76048 5.71368 8.6587 5.69117 8.5454L5.69098 8.54444ZM4.55739 12.5054C4.55739 11.8175 5.1151 11.2597 5.80307 11.2597C6.49105 11.2597 7.04876 11.8175 7.04876 12.5054C7.04876 13.1934 6.49105 13.7511 5.80307 13.7511C5.1151 13.7511 4.55739 13.1934 4.55739 12.5054ZM10.9307 12.5054C10.9307 11.8175 11.4884 11.2597 12.1764 11.2597C12.8644 11.2597 13.4221 11.8175 13.4221 12.5054C13.4221 13.1934 12.8644 13.7511 12.1764 13.7511C11.4884 13.7511 10.9307 13.1934 10.9307 12.5054Z" fill="currentColor"/>
-                  </svg>
-              </button>
-            </p>
-          </li>
-          <li class="popular-products-item">
-            <img class="popular-products-img" src="images/catalog/product-3.png" width="168" height="168" alt="Черничный шарик мороженого.">
-            <h3 class="popular-products-item-title title-4">
-              Черника
-            </h3>
-            <p class="popular-products-text paragraph-2">
-              Крем-брюле <br>с черничным джемом
-            </p>
-            <p class="popular-products-price-wrapper">
-              <strong class="popular-products-price title-4">330 ₽/кг</strong>
-              <button class="button-secondary button-popular-products" type="button">
-                <span class="visually-hidden">Добавить в корзину.</span>
-                <svg class="popular-products-button-icon" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M1.16667 0.25C0.798477 0.25 0.5 0.548477 0.5 0.916667C0.5 1.28486 0.798477 1.58333 1.16667 1.58333H2.93794L3.40537 3.91872C3.40821 3.93667 3.41176 3.95438 3.416 3.97182L4.38338 8.80515L4.3835 8.80571C4.46706 9.22572 4.69562 9.60299 5.02921 9.87153C5.36111 10.1387 5.77595 10.2813 6.20183 10.2748H11.8225C12.2484 10.2813 12.6633 10.1387 12.9952 9.87153C13.3289 9.60287 13.5575 9.22538 13.641 8.80515L13.641 8.80515L13.642 8.80016L14.5691 3.93872C14.6063 3.74355 14.5545 3.54195 14.4279 3.38887C14.3012 3.23578 14.1129 3.14716 13.9142 3.14716H4.61072L4.1381 0.785829C4.07574 0.474257 3.80215 0.25 3.4844 0.25H1.16667ZM5.69098 8.54444L4.87759 4.4805H13.1084L12.3328 8.54736C12.31 8.65988 12.2485 8.7609 12.1591 8.83291C12.0691 8.90535 11.9565 8.94383 11.841 8.94162L11.841 8.94149H11.8282H6.19614V8.94137L6.18337 8.94162C6.06787 8.94383 5.95528 8.90535 5.8653 8.83291C5.77531 8.76048 5.71368 8.6587 5.69117 8.5454L5.69098 8.54444ZM4.55739 12.5054C4.55739 11.8175 5.1151 11.2597 5.80307 11.2597C6.49105 11.2597 7.04876 11.8175 7.04876 12.5054C7.04876 13.1934 6.49105 13.7511 5.80307 13.7511C5.1151 13.7511 4.55739 13.1934 4.55739 12.5054ZM10.9307 12.5054C10.9307 11.8175 11.4884 11.2597 12.1764 11.2597C12.8644 11.2597 13.4221 11.8175 13.4221 12.5054C13.4221 13.1934 12.8644 13.7511 12.1764 13.7511C11.4884 13.7511 10.9307 13.1934 10.9307 12.5054Z" fill="currentColor"/>
-                  </svg>
-              </button>
-            </p>
-          </li>
-          <li class="popular-products-item">
-            <img class="popular-products-img" src="images/catalog/product-4.png" width="168" height="168" alt="Шарик мороженого Бабл-гам.">
-            <h3 class="popular-products-item-title title-4">
-              Бабл-гам
-            </h3>
-            <p class="popular-products-text paragraph-2">
-              Ванильный пломбир <br>со сладкой посыпкой
-            </p>
-            <p class="popular-products-price-wrapper">
-              <strong class="popular-products-price title-4">320 ₽/кг</strong>
-              <button class="button-secondary button-popular-products" type="button">
-                <span class="visually-hidden">Добавить в корзину.</span>
-                <svg class="popular-products-button-icon" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M1.16667 0.25C0.798477 0.25 0.5 0.548477 0.5 0.916667C0.5 1.28486 0.798477 1.58333 1.16667 1.58333H2.93794L3.40537 3.91872C3.40821 3.93667 3.41176 3.95438 3.416 3.97182L4.38338 8.80515L4.3835 8.80571C4.46706 9.22572 4.69562 9.60299 5.02921 9.87153C5.36111 10.1387 5.77595 10.2813 6.20183 10.2748H11.8225C12.2484 10.2813 12.6633 10.1387 12.9952 9.87153C13.3289 9.60287 13.5575 9.22538 13.641 8.80515L13.641 8.80515L13.642 8.80016L14.5691 3.93872C14.6063 3.74355 14.5545 3.54195 14.4279 3.38887C14.3012 3.23578 14.1129 3.14716 13.9142 3.14716H4.61072L4.1381 0.785829C4.07574 0.474257 3.80215 0.25 3.4844 0.25H1.16667ZM5.69098 8.54444L4.87759 4.4805H13.1084L12.3328 8.54736C12.31 8.65988 12.2485 8.7609 12.1591 8.83291C12.0691 8.90535 11.9565 8.94383 11.841 8.94162L11.841 8.94149H11.8282H6.19614V8.94137L6.18337 8.94162C6.06787 8.94383 5.95528 8.90535 5.8653 8.83291C5.77531 8.76048 5.71368 8.6587 5.69117 8.5454L5.69098 8.54444ZM4.55739 12.5054C4.55739 11.8175 5.1151 11.2597 5.80307 11.2597C6.49105 11.2597 7.04876 11.8175 7.04876 12.5054C7.04876 13.1934 6.49105 13.7511 5.80307 13.7511C5.1151 13.7511 4.55739 13.1934 4.55739 12.5054ZM10.9307 12.5054C10.9307 11.8175 11.4884 11.2597 12.1764 11.2597C12.8644 11.2597 13.4221 11.8175 13.4221 12.5054C13.4221 13.1934 12.8644 13.7511 12.1764 13.7511C11.4884 13.7511 10.9307 13.1934 10.9307 12.5054Z" fill="currentColor"/>
-                  </svg>
-              </button>
-            </p>
-          </li>
-        </ul>
-      </section>
-
-      <section class="company-features">
-        <div class="company-features-wrapper">
-          <h2 class="company-features-title subtitle">
-            Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес
-          </h2>
-          <ul class="company-features-list">
-            <li class="company-features-item company-features-item-manufacturing">
-              <p class="company-features-text paragraph-2">
-                Всё наше мороженое изготавливается на собственном производстве с использованием современного оборудования и
-                проверенных временем технологий.
-              </p>
-            </li>
-            <li class="company-features-item company-features-item-ingredients">
-              <p class="company-features-text paragraph-2">
-                Закупка ингредиентов производится только <br>
-                у проверенных фермерских хозяйств, с которыми<br>
-                нас связывает долговременное сотрудничество.
-              </p>
-            </li>
-            <li class="company-features-item company-features-item-milk">
-              <p class="company-features-text paragraph-2">
-                Для приготовления мороженого используются сливки и молоко высочайшего качества. Все ингредиенты <br>
-                и добавки произведены из натурального сырья.
-              </p>
-            </li>
-            <li class="company-features-item company-features-item-delivery">
-              <p class="company-features-text paragraph-2">
-                Доставка нашего мороженого осуществляется в специальном термопаке,
-                который не даёт мороженому растаять и позволяет сохранить превосходный вкус.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div class="blog-subscription-wrapper">
-        <section class="blog-news">
-          <span class="blog-news-label paragraph-3">Новое в нашем блоге</span>
-          <h2 class="blog-news-title title-3">
-            10 способов сервировки фруктовых щербетов <br> к столу
-          </h2>
-        </section>
-
-        <section class="subscription">
-          <div class="subscription-wrapper">
-            <h2 class="visually-hidden">Подписка на рассылку.</h2>
-            <p class="subscription-text paragraph-2">
-              Подпишитесь на нашу сладкую рассылку и будьте всегда
-              <br>в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
-            </p>
-            <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-              <input class="form-field subscription-field" type="email" name="email" placeholder="email@example.com" aria-label="Электронная почта.">
-              <button class="button-secondary subscription-button" type="submit">Отправить</button>
-            </form>
-          </div>
-        </section>
-      </div>
-
-      <section class="delivery">
-        <div class="delivery-description">
-          <h2 class="delivery-description-title subtitle">
-            Доставка любимого мороженого на дом
-          </h2>
-          <p class="delivery-description-text paragraph-2">
-            Хочется полакомиться любимым десертом, <br> но нет времени съездить в магазин? Закажите доставку мороженого на дом,
-            и курьер привезёт вам ваш заказ в течение часа!
+        <div class="subscription">
+          <p class="feedback-text">
+            Обратная связь: <br>
+            <a class="feedback-mail" href="#">mail@htmlacademy.ru</a>
           </p>
-        </div>
-        <div class="delivery-form-wrapper">
-          <p class="delivery-form-text paragraph-2">
-            Укажите адрес и дату доставки, и мы свяжемся <br>с вами, чтобы подтвердить заказ.
-          </p>
-          <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
-            <label class="delivery-label">
-              <span class="delivery-label-text paragraph-bold">Дата</span>
-              <span class="delivery-label-tooltip">
-                <span class="tooltip-icon"></span>
-                <span class="tooltip-text-wrapper">
-                  <span class="tooltip-text date-tooltip-text label-2">Введите дату</span>
-                </span>
-              </span>
-              <input class="delivery-field-date form-field" type="text" name="date" placeholder="01.04.2020">
-            </label>
-            <label class="delivery-label">
-              <span class="delivery-label-tooltip">
-                <span class="delivery-label-text paragraph-bold">Телефон</span>
-              </span>
-              <input class="delivery-field-phone form-field" type="tel" name="phone" placeholder="+7 800 999-00-00">
-            </label>
-            <label class="delivery-label">
-              <span class="delivery-label-text paragraph-bold">Адрес</span>
-              <span class="delivery-label-tooltip">
-                <span class="tooltip-icon"></span>
-                <span class="tooltip-text-wrapper tooltip-text-wrapper-address">
-                  <span class="tooltip-text address-tooltip-text label-2">Введите название<br> улицы, дома и квартиры</span>
-                </span>
-                </span>
-              <input class="delivery-field-address form-field" type="text" name="address" placeholder="ул. Большая Конюшенная, 19/8">
-            </label>
-            <button class="button-secondary delivery-button" type="submit">Отправить</button>
+          <p class="subscription-text">Получайте лучшие предложения</p>
+          <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
+            <input class="subscription-field form-field" type="email" name="email" placeholder="email@example.com" aria-label="Поле ввода электронной почты для получения рассылки.">
+            <button class="button-subscription" type="submit">
+              <span class="visually-hidden">Подписаться на рассылку.</span>
+            </button>
           </form>
         </div>
       </section>
 
-      <section class="contacts">
-          <div class="contacts-wrapper">
-            <h2 class="contacts-title paragraph-2">
-              Адрес главного офиса <br>и офлайн-магазина:
-            </h2>
-            <address class="contacts-text title-4">
-              наб. реки Карповки,<br> 5 лит П, Санкт-Петербург
-            </address>
-            <h2 class="contacts-title paragraph-2">
-              Для заказов по телефону:
-            </h2>
-            <a class="contacts-text title-4" href="tel:+78128121212">
-              +7 (812) 812-12-12
-            </a>
-            <p class="contacts-label label-1">
-              (с 10 до 20 ежедневно)
-            </p>
-            <button class="contacts-button button-secondary" type="button">Форма обратной связи</button>
-          </div>
-      </section>
-    </main>
-
-    <footer class="page-footer container">
-      <div class="page-footer-wrapper">
-        <ul class="footer-social-list">
-          <li class="footer-social-item">
-            <a class="footer-social-link footer-social-link-tg" href="https://t.me/htmlacademy">
-              <span class="visually-hidden">Телеграмм.</span>
-            </a>
-          </li>
-          <li class="footer-social-item">
-            <a class="footer-social-link footer-social-link-vk" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">Вконтакте.</span>
-            </a>
-          </li>
-          <li class="footer-social-item">
-            <a class="footer-social-link footer-social-link-yt" href="https://www.youtube.com/user/htmlacademyru">
-              <span class="visually-hidden">Ютуб.</span>
-            </a>
-          </li>
-        </ul>
-        <ul class="footer-menu-list">
-          <li class="footer-menu-item">
-            <h3 class="footer-menu-title label-bold">Для поставщиков</h3>
-          </li>
-          <li class="footer-menu-item">
-            <a class="footer-menu-link label-1" href="#">Наши документы</a>
-          </li>
-          <li class="footer-menu-item">
-            <a class="footer-menu-link label-1" href="#">О производстве</a>
-          </li>
-          <li class="footer-menu-item">
-            <a class="footer-menu-link label-1" href="#">Экологические стандарты</a>
-          </li>
-        </ul>
-        <div class="footer-logo-wrapper">
-          <a class="footer-logo-link" href="https://htmlacademy.ru/" aria-label="Переход на страницу компании HTML Academy.">
-            <img class="footer-logo" src="images/footer/logo-htmlacademy.svg" width="93" height="27" alt="Лого HTML Academy.">
-          </a>
-          <p class="footer-logo-text label-2">
-            Сделано в <a class="footer-logo-text-link" href="https://htmlacademy.ru/" aria-label="Переход на страницу компании HTML Academy">.html academy</a> © 2021
+      <div class="copyright-wrapper">
+        <section class="copyright container">
+          <h2 class="visually-hidden">Авторские права</h2>
+          <p class="copyright-text label">
+            © 2010–2019 Компания «Техномарт» Все права защищены
           </p>
-        </div>
-      </div>
+          <p class="author label">
+            Разработано — <a class="author-link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+          </p>
+        </section>
+      </div> 
     </footer>
-
-    <!-- Для отображения модального окна добавьте к div с классом modal-container класс modal-container-is-open-->
-    <div class="modal-container">
-      <div class="modal">
-        <section class="modal-content">
-          <h2 class="visually-hidden">Форма обратной связи.</h2>
-          <button class="modal-close" type="button">
-            <span class="visually-hidden">Закрыть модальное окно.</span>
-          </button>
-          <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
-            <fieldset class="modal-fieldset">
-              <legend class="modal-legend title-3">Мы обязательно ответим вам!</legend>
-              <input class="modal-field form-field paragraph-3" type="text" name="name" placeholder="Имя и фамилия" aria-label="Имя и фамилия.">
-              <input class="modal-field form-field paragraph-3" type="email" name="email" placeholder="email@example.com" aria-label="Электронная почта.">
-              <textarea class="modal-textarea form-field paragraph-3" rows="6" cols="1" name="comment" placeholder="В свободной форме" aria-label="Ваш вопрос или пожелание.">
-              </textarea>
-              <button class="modal-button button-secondary" type="submit">Отправить</button>
-            </fieldset>
-          </form>
-         </section>
-        </div>
-      </div>
   </body>
 </html>
