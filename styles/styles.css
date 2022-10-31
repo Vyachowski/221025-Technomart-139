@@ -214,6 +214,7 @@ img {
 
 .button,
 .button-arrow {
+  max-width: 300px;
   padding: 13.5px 23px;
   background-color: var(--basic-red);
 }
@@ -284,10 +285,6 @@ img {
 .button-additional:active {
   border-color: var(--basic-greylight);
   color: var(--basic-greylight);
-}
-
-.button-additional:focus-visible {
-  border-color: 2px solid var(--black);
 }
 
 .button-additional:disabled {
@@ -461,7 +458,6 @@ img {
 .new-badge::before,
 .product-card-new::before {
   position: absolute;
-  top: 17.5;
   right: 0;
   width: 70px;
   height: 70px;
@@ -515,12 +511,14 @@ img {
 }
 
 .header-address {
+  max-width: 300px;
   margin-top: -3px;
   margin-right: 32px;
   color: var(--basic-grey-hover);
 }
 
 .header-phone {
+  max-width: 220px;
   position: relative;
   margin-top: -1px;
   margin-right: 3px;
@@ -676,6 +674,7 @@ img {
 
 .login-button,
 .logout-button {
+  max-width: 215px;
   color: var(--basic-background);
   margin-left: auto;
   margin-right: 1px;
@@ -880,9 +879,6 @@ img {
   padding-right: 24px;
 }
 
-.navigation-link[title="Контакты"] { 
-}
-
 .navigation-link:hover {
   color: var(--basic-greylight);
   background-color: var(--basic-grey-hover);
@@ -905,6 +901,7 @@ img {
 }
 
 .order-menu-wrapper {
+  max-width: 270px;
   min-height: 70px;
   padding-top: 11px;
 }
